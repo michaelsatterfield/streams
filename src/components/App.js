@@ -4,7 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 const PageOne = () => {
     return <div>One
-        <a href={'/2'}>2</a>
+       <button><a href={'/2'}>2</a></button>
     </div>
 }
 const PageTwo = () => {
