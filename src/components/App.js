@@ -3,21 +3,23 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 
 const PageOne = () => {
-    return <div>One
-       <button><a href={'/2'}>2</a></button>
+    return  <div>Home Page
+        <div><br/></div>
+        <a href={'/2'}> <button>Page 2</button></a>
     </div>
 }
 const PageTwo = () => {
-    return <div>Two
-        <a href={'/'}>Home</a>
+    return <div> Page Two
+      <div> <br/></div>
+        <a href={'/'}><button> Back to Home Page </button></a>
     </div>
 }
 
 
 const App = () => {
     return (
+        /*use "exact" keyword with Router*/
         <div>
-
             <BrowserRouter>
                 <Route path="/" exact component={PageOne}/>
                 <Route path="/2" exact component={PageTwo}/>
