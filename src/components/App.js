@@ -11,10 +11,10 @@ import Header from "./Header";
 const App = () => {
     return (
         /*use "exact" keyword with Router*/
-        <div>
-           <Header></Header>
+        <div className={"ui container"}>
             <BrowserRouter>
-              <div>
+                <div>
+                  <Header/>
                   <Route path={"/"} exact component={StreamList}/>
                   <Route path={"/streams/new"} exact component={StreamCreate}/>
                   <Route path={"/streams/edit"} exact component={StreamEdit}/>
