@@ -8,7 +8,7 @@ class GoogleAuth extends Component {
                 scope: 'email'
             }).then(() => {
                 this.auth = window.gapi.auth2.getAuthInstance();
-                // this.setState({isSignedIn: })
+                this.setState({isSignedIn: this.auth.isSignedIn.get()})
             })
             });
     }
