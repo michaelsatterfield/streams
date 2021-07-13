@@ -20,14 +20,16 @@ class GoogleAuth extends Component {
         if (this.state.isSignedIn === null){
             return <div>I don't know if were signed in</div>
         } else if (this.state.isSignedIn){
-            return <div>Signed In</div>
+            return <div>Signed In!</div>
+        } else {
+            return <div>I am not signed in</div>;
         }
     }
 
     render() {
         return (
             <div>
-                Google Auth
+                {this.renderAuthButton()}
             </div>
         );
     }
