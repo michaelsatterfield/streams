@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 class GoogleAuth extends Component {
+    //null because not sure if user is signed in at beginning
     state = { isSignedIn: null };
 
     componentDidMount() {
@@ -15,11 +16,20 @@ class GoogleAuth extends Component {
             });
     }
 
+    renderAuthButton(){
+        if (this.state.isSignedIn === null){
+            return <div>I don't know if were signed in</div>
+        } else if (this.state.isSignedIn){
+            return <div>Signed In!</div>
+        } else {
+            return <div>I am not signed in</div>;
+        }
+    }
 
     render() {
         return (
             <div>
-                Google Auth
+                {this.renderAuthButton()}
             </div>
         );
     }
