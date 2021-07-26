@@ -4,8 +4,6 @@ import { signIn, signOut } from '../actions';
 
 
 class GoogleAuth extends Component {
-    //null because not sure if user is signed in at beginning
-    state = {isSignedIn: null};
 
     componentDidMount() {
         window.gapi.load('client:auth2', () => {
@@ -63,7 +61,9 @@ class GoogleAuth extends Component {
         );
     }
 }
-
+const mapStateToProps = (state) => {
+    return { isSignedIn: state.auth.isSignedIn}
+}
 export default connect(null,
     {signIn, signOut}
     ) (GoogleAuth);
