@@ -40,7 +40,7 @@ class GoogleAuth extends Component {
             return (
                 <button onClick={this.onSignOutClick} className={"ui red google button"}>
                     <i className={"google icon"} />
-                    Sign Out
+                    Click here to Sign Out
                 </button>
             )
         } else {
